@@ -33,16 +33,16 @@ function printArray(arr) {
         let count = 0;
         let prev = 0;
         for (let j = 0; j < row.length; j++) {
-        rowStr += row[j] + ' ';
-        if (row[j] > 0 && row[j] < minPos) {
-            minPos = row[j];
-        }
-        if (prev * row[j] > 0) {
-            count++;
-        } else {
-            count = 1;
-        }
-        prev = row[j];
+            rowStr += row[j] + ' ';
+            if (row[j] > 0 && row[j] < minPos) {
+                minPos = row[j];
+            }
+            if (prev * row[j] > 0) {
+                count++;
+            } else {
+                count = 1;
+            }
+            prev = row[j];
         }
         console.log(rowStr + '  Min positive: ' + (minPos === Infinity ? 'None' : minPos));
         console.log('  Need to replace at least ' + (count - 2) + ' numbers to avoid 3 in a row');
